@@ -11,14 +11,14 @@
   ```
 
 ### Các cách triển khai RabbitMQ Broker:
-1. **Chạy qua Docker (khuyến nghị, nhanh nhất)**:
+1. **Chạy qua Docker**:
    ```bash
    docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
    ```
    - Truy cập giao diện quản trị Web: `http://localhost:15672` (tài khoản: `guest` / `guest`).
 2. **Cài đặt trực tiếp trên Windows**:
    - Tải Erlang và RabbitMQ Server từ trang chủ [rabbitmq.com](https://www.rabbitmq.com/).
-3. **Sử dụng CloudAMQP (Miễn phí trên đám mây)**:
+3. **Sử dụng CloudAMQP**:
    - Đăng ký tài khoản tại [cloudamqp.com](https://www.cloudamqp.com/) (gói Little Lemur miễn phí).
    - Thiết lập biến môi trường `RABBITMQ_URL`:
      ```bash
