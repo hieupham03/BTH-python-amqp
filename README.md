@@ -29,17 +29,17 @@
 
 ## 2. Cấu trúc các bài thực hành
 
-### 📁 Thư mục `bai1/`: Gửi và nhận message cơ bản qua queue
+### Thư mục `bai1/`: Gửi và nhận message cơ bản qua queue
 - `producer_bai1.py`: Kết nối tới RabbitMQ, khai báo queue `iot_lab_queue` và gửi thông điệp chào mừng kèm thông tin sinh viên.
 - `consumer_bai1.py`: Kết nối broker, lắng nghe hàng đợi `iot_lab_queue`, nhận và in thông điệp kèm thời gian nhận.
 - `README.md`: Báo cáo chi tiết và hướng dẫn chạy Bài 1.
 
-### 📁 Thư mục `bai2/`: Mô phỏng cảm biến IoT gửi dữ liệu môi trường
+### Thư mục `bai2/`: Mô phỏng cảm biến IoT gửi dữ liệu môi trường
 - `sensor_producer_bai2.py`: Mô phỏng cảm biến gửi dữ liệu nhiệt độ và độ ẩm định kỳ mỗi 3 giây dạng JSON vào queue `sensor_data_queue`.
 - `monitor_consumer_bai2.py`: Lắng nghe dữ liệu, phân tích JSON và đưa ra cảnh báo khi nhiệt độ > 35°C hoặc độ ẩm < 40%.
 - `README.md`: Báo cáo chi tiết và hướng dẫn chạy Bài 2.
 
-### 📁 Thư mục `bai3/`: Mô phỏng hệ thống điều phối cảnh báo IoT với Exchange
+### Thư mục `bai3/`: Mô phỏng hệ thống điều phối cảnh báo IoT với Exchange
 - `alert_producer_bai3.py`: Khai báo direct exchange `iot_alert_exchange`, gửi thông điệp kèm routing key (`info`, `warning`, `critical`).
 - `warning_consumer_bai3.py`: Tạo `warning_queue`, bind với routing key `warning` để chỉ nhận cảnh báo mức Warning.
 - `critical_consumer_bai3.py`: Tạo `critical_queue`, bind với routing key `critical` để chỉ nhận cảnh báo mức Critical.
